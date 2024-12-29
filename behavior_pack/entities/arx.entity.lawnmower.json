@@ -1,0 +1,63 @@
+{
+	"format_version": "1.20.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "arx:lawnmower",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"components": {
+		  "minecraft:damage_sensor": {
+				"triggers": {
+					"cause": "all",
+					"deals_damage": false
+		  }},
+			"minecraft:type_family": {
+				"family": [
+					"arx_npc"
+		  ]},
+			"minecraft:health": {
+				"value": 32767,
+				"max": 32767
+			},
+			"minecraft:movement": {
+				"value": 0
+			},
+			"minecraft:jump.static": {
+				"jump_power": 0
+			},
+			"minecraft:physics": {
+				"has_collision": true,
+				"has_gravity": true
+			},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": false
+			},
+			"minecraft:knockback_resistance": {
+				"value": 1
+			},
+			"minecraft:collision_box": {
+				"width": 0.5,
+				"height": 3.0
+			}
+		},
+		"component_groups": {
+      "arx:despawn": {
+        "minecraft:instant_despawn": {
+          "remove_child_entities": true
+        }
+      }
+    },
+    "events": {
+      "arx:remove": {
+        "add": {
+          "component_groups": [
+            "arx:despawn"
+          ]
+        }
+      }
+    }
+	}
+}

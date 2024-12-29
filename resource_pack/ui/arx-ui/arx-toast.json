@@ -1,0 +1,153 @@
+{ "namespace": "arx-toast",
+  "factory": {
+    "type": "panel",
+    "anchor_from": "top_right",
+    "anchor_to": "top_right",
+    "size": [ 180, "100%c" ],
+    "max_size": [ 180, "75%" ],
+    "controls": [
+      { "factory_stack": {
+          "type": "stack_panel",
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "factory": {
+            "name": "chat_item_factory",
+            "max_children_size": 20,
+            "control_ids": {
+              "chat_item": "arx-toast@arx-toast.element"
+          }}
+      }}
+  ]},
+  "element": {
+    "type": "panel",
+    "layer": 999,
+    "size": [ "100%cm", "100%cm" ],
+    "controls": [
+      { "@arx-toast.help_toast": {}}
+  ]},
+  /* [prefix]:[title];[desc];*/
+  /* _arxtoast0:.h000;.t000;*/
+  "help_toast": {
+    "type": "panel",
+    "size": [ 180, 42 ],
+    "propagate_alpha": true,
+    "layer": 10,
+    "anims": [
+      "@arx-toast.anim_chat_stack",
+      "@arx-toast.anim_chat_bg_pop"
+    ],
+    "controls": [
+      { "toast_bg@toast_image_template": {
+          "texture": "textures/ui/greyBorder",
+          "size": [ "100%", "100%" ],
+          "layer": 5,
+          "bindings": []
+      }},
+      { "progress_bar@toast_image_template": {
+          "texture": "textures/ui/White",
+          "size": [ "100% - 8px", 1 ],
+          "layer": 10,
+          "offset": [ 4, -4 ],
+          "anchor_from": "bottom_left",
+          "anchor_to": "bottom_left",
+          "anims": [
+            "@arx-toast.progress_bar_anim"
+          ],
+          "bindings": []
+      }},
+      { "title@toast_label_template": {
+          "$arx:chat_text_binding": "('arx.toast' + ('%.5s' * (#text - ('%.11s' * #text))) + '')",
+          "type": "label",
+          "text": "#displaytext",
+          "offset": [ 8, -10 ],
+          "layer": 10
+      }},
+      { "label@toast_label_template": {
+          "$arx:chat_text_binding": "('arx.toast' + ('%.5s' * (#text - ('%.16s' * #text))) + '')",
+          "type": "label",
+          "text": "#displaytext",
+          "offset": [ 8, 16 ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "layer": 10
+    }}],
+    "bindings": [
+      { "binding_name": "#chat_text",
+        "binding_name_override": "#text",
+        "binding_type": "collection",
+        "binding_collection_name": "chat_text_grid",
+        "binding_condition": "once"
+      },
+      { "binding_type": "view",
+        "source_property_name": "('%.12s' * #text = '_arx:toast0.')",
+        "target_property_name": "#visible"
+  }]},
+  "progress_bar_anim": {
+    "anim_type": "size",
+    "from": [ "0%", 1 ],
+    "to": [ "100% - 8px", 1 ],
+    "duration": "($chat_item_lifetime + 2)"
+  },
+  "anim_chat_stack": {
+    "anim_type": "size",
+    "easing": "out_expo",
+    "duration": 0.5,
+    "from": [ 180, 0 ],
+    "to": [ 180, 42 ]
+  },
+  "anim_chat_bg_pop": {
+    "anim_type": "offset",
+    "easing": "out_expo",
+    "duration": 1,
+    "from": [ "100%", 0 ],
+    "to": [ 0, 0 ],
+    "next": "@arx-toast.anim_chat_bg_wait_push"
+  },
+  "anim_chat_bg_wait_push": {
+    "anim_type": "wait",
+    "duration": "$chat_item_lifetime",
+    "next": "@arx-toast.anim_chat_bg_push"
+  },
+  "anim_chat_bg_push": {
+    "anim_type": "offset",
+    "easing": "in_expo",
+    "duration": 1,
+    "from": [ 0, 0 ],
+    "to": [ "100%", 0 ],
+    "destroy_at_end": "chat_grid_item"
+  },
+  "toast_image_template": {
+    "$arx:chat_image_binding|default": "#text",
+    "type": "image",
+    "force_texture_reload": true,
+    "allow_debug_missing_texture": false,
+    "layer": 10,
+    "bindings": [
+      { "binding_name": "#chat_text",
+        "binding_name_override": "#text",
+        "binding_type": "collection",
+        "binding_collection_name": "chat_text_grid",
+        "binding_condition": "once"
+      },
+      { "binding_type": "view",
+        "source_property_name": "$arx:chat_image_binding",
+        "target_property_name": "#texture"
+  }]},
+  "toast_label_template": {
+	  "$arx:chat_text_binding|default": "#text",
+    "type": "label",
+    "max_size": [ "100% - 18px", 20 ],
+	  "anchor_from": "left_middle",
+	  "anchor_to": "left_middle",
+    "bindings": [
+      { "binding_name": "#chat_text",
+        "binding_name_override": "#text",
+        "binding_type": "collection",
+        "binding_collection_name": "chat_text_grid",
+        "binding_condition": "once"
+      },
+      { "binding_type": "view",
+        "source_property_name": "$arx:chat_text_binding",
+        "target_property_name": "#displaytext"
+  }]}
+}

@@ -1,0 +1,1 @@
+execute as @s[tag=!arxobject-obj06] run tag @s add arxanim-speedrun_stopper

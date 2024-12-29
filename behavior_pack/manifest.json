@@ -1,0 +1,29 @@
+{ "format_version": 2,
+  "header": {
+    "name": "Elysium: Remake (BP)",
+    "description": "Behavior pack designed for the map.\nBy Arxance.",
+    "uuid": "dc23fd27-701c-4195-87e0-8e634be46573",
+    "version": [ 1, 0, 0 ],
+    "min_engine_version": [ 1, 21, 0 ]
+  },
+  "modules": [
+    { "type": "data",
+      "uuid": "2b93772b-a8df-4eb4-9b4e-a54f72ef2829",
+      "version": [ 1, 0, 0 ]
+    },
+    { "type": "script",
+      "uuid": "d713ac76-52ac-4da2-b23c-79f2fc2a8522",
+      "version": [ 1, 0, 0 ],
+      "language": "javascript",
+      "entry": "scripts/main.js"
+  }],
+  "dependencies": [
+    { "module_name": "@minecraft/server",
+      "version": "1.17.0-beta"
+    },
+    { "module_name": "@minecraft/server-ui",
+      "version": "1.2.0"
+    },
+    { "uuid": "bcdbd22a-fcd6-4c3b-bf20-40c313e572e2",
+      "version": [ 1, 0, 0 ]
+}]}

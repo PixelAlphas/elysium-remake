@@ -1,0 +1,71 @@
+{
+  "namespace": "arx-energybar",
+  "factory": {
+    "type": "panel",
+    "factory": {
+      "name": "hud_title_text_factory",
+      "control_ids": {
+        "hud_title_text": "arx-energybar@arx-energybar.element"
+      }
+  }},
+  "element": {
+    "type": "panel",
+    "$arx:title": "$title_text",
+    "controls": [
+      { "@arx-energybar.core": {}}
+  ]},
+  "core": {
+    "type": "panel",
+    "ignored": "(not('%.10s' * $arx:title = '_arx:ehud.'))",
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "layer": 999,
+    "size": [ 183, 60 ],
+    "offset": [ 0, -40 ],
+    "controls": [
+      { "energy_progress": {
+          "type": "panel",
+          "size": [ 183, 5 ],
+          "offset": [ 0, 25 ],
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "clips_children": true,
+          "controls":[
+            { "progress_image_static": {
+                "type": "image",
+                "size": [ "100%", "100%" ],
+                "layer": 2,
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle",
+                "$clip_max": 40.0,
+                "color": [ 0.917, 0.811, 0.058 ],
+                "property_bag": {
+                  "#size_binding_x": 0.0,
+                  "#size_binding_y": 0.0
+                },
+                "texture": "textures/ui/filled_progress_bar",
+                "bindings": [
+                  { "binding_name": "#hud_title_text_string",
+                    "binding_type": "global"
+                  },
+                  { "binding_type": "view",
+                    "source_property_name": "((('%.4s' * (#hud_title_text_string - ('%.10s' * #hud_title_text_string))) - 'e1') * 1)",
+                    "target_property_name": "#size_progress"
+                  },
+                  { "binding_type": "view",
+                    "source_property_name": "(#size_progress / $clip_max)",
+                    "target_property_name": "#size_binding_x"
+                }]
+            }},
+            { "progress_image_bg": {
+                "type": "image",
+                "size": [ "100%", "100%" ],
+                "layer": 1,
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle",
+                "color": [ 0.917, 0.811, 0.058 ],
+                "texture": "textures/ui/empty_progress_bar"
+            }}
+      ]}}
+  ]}
+}

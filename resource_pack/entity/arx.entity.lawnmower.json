@@ -1,0 +1,36 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "arx:lawnmower",
+      "spawn_egg": {
+        "overlay_color": "#a29920",
+        "base_color": "#a28949"
+      },
+      "materials": {
+        "default": "outline_base",
+        "outline": "outline"
+      },
+      "textures": {
+        "default": "textures/arx-assets/entity/lawnmower",
+        "outline": "textures/ui/White"
+      },
+      "geometry": {
+        "default": "geometry.arx.lawnmower",
+        "outline": "geometry.arx.lawnmower.outline"
+      },
+      "scripts": {
+        "animate": [
+          "root"
+        ]
+      },
+      "animations": {
+        "root": "animation.arx.lawnmower.idle"
+      },
+      "render_controllers": [
+        "controller.render.default",
+        "controller.render.arx.mob.outline"
+      ]
+    }
+  }
+}

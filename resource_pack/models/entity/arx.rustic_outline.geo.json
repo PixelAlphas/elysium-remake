@@ -1,0 +1,94 @@
+{
+	"format_version": "1.10.0",
+	"geometry.arx.rustic.outline": {
+		"texturewidth": 64,
+		"textureheight": 64,
+		"visible_bounds_width": 2,
+		"visible_bounds_height": 3,
+		"visible_bounds_offset": [0, 1.5, 0],
+		"bones": [
+			{
+				"name": "root",
+				"pivot": [0, 1, 0]
+			},
+			{
+				"name": "waist",
+				"parent": "root",
+				"pivot": [0, 13, 0]
+			},
+			{
+				"name": "body",
+				"parent": "waist",
+				"pivot": [0, 25, 0],
+				"cubes": [
+					{"origin": [-4, 13, -2], "size": [8, 12, 4], "uv": [0, 32], "inflate": 0.5}
+				]
+			},
+			{
+				"name": "head",
+				"parent": "body",
+				"pivot": [0, 25, 0],
+				"cubes": [
+					{"origin": [-4, 25, -4], "size": [8, 8, 8], "uv": [0, 0], "inflate": 0.5}
+				]
+			},
+			{
+				"name": "custom",
+				"parent": "head",
+				"pivot": [0, 30, 1],
+				"rotation": [-45, 0, 0],
+				"cubes": [
+					{"origin": [-5, 28, -1], "size": [1, 4, 4], "uv": [0, 48], "inflate": 0.5},
+					{"origin": [4, 28, -1], "size": [1, 4, 4], "uv": [48, 0], "inflate": 0.5},
+					{"origin": [-5, 32, 0], "size": [1, 4, 1], "uv": [48, 8], "inflate": 0.5},
+					{"origin": [4, 32, 0], "size": [1, 4, 1], "uv": [10, 48], "inflate": 0.5}
+				]
+			},
+			{
+				"name": "leftArm",
+				"parent": "body",
+				"pivot": [5, 23, 0],
+				"cubes": [
+					{"origin": [4, 13, -2], "size": [3, 12, 4], "uv": [24, 32], "inflate": 0.5}
+				]
+			},
+			{
+				"name": "leftItem",
+				"parent": "leftArm",
+				"pivot": [6, 16, 1]
+			},
+			{
+				"name": "rightArm",
+				"parent": "body",
+				"pivot": [-5, 23, 0],
+				"cubes": [
+					{"origin": [-7, 13, -2], "size": [3, 12, 4], "uv": [38, 32], "inflate": 0.5}
+				]
+			},
+			{
+				"name": "rightItem",
+				"parent": "rightArm",
+				"pivot": [-6, 16, 1],
+				"locators": {
+					"lead_hold": [-6, 16, 1]
+				}
+			},
+			{
+				"name": "leftLeg",
+				"parent": "root",
+				"pivot": [1.9, 13, 0],
+				"cubes": [
+					{"origin": [-0.1, 1, -2], "size": [4, 12, 4], "uv": [32, 0], "inflate": 0.5}
+				]
+			},
+			{
+				"name": "rightLeg",
+				"parent": "root",
+				"pivot": [-1.9, 13, 0],
+				"cubes": [
+					{"origin": [-3.9, 1, -2], "size": [4, 12, 4], "uv": [32, 16], "inflate": 0.5}
+				]
+			}
+		]
+	}
+}

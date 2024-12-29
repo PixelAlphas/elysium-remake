@@ -1,0 +1,7 @@
+{ 
+  "arx:falling": { "category": "music", "sounds": [ { "name": "sounds/misc/falling", "stream": true }]},
+  "arx:checkpoint": { "category": "music", "sounds": [ { "name": "sounds/misc/checkpoint", "stream": true }]},
+  "arx:text_rustic": { "category": "music", "sounds": [ { "name": "sounds/misc/text_rustic", "stream": true }]},
+  "arx:text_regular": { "category": "music", "sounds": [ { "name": "sounds/misc/text_regular", "stream": true }]},
+  "arx:jump": { "category": "music", "sounds": [ { "name": "sounds/misc/jump", "stream": true }]}
+}

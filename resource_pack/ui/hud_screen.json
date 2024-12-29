@@ -1,0 +1,34 @@
+{
+  "hud_actionbar_text": {
+    "$actionbar|default": "$actionbar_text",
+    "visible": "(($actionbar - '_arx:') = $actionbar))"
+  },
+  "hud_title_text/title_frame": {
+    "ignored": "('%.5s' * $title_text = '_arx:'')"
+  },
+  "hud_title_text/subtitle_frame": {
+    "ignored": "('%.5s' * $title_text = '_arx:')"
+  },
+  "chat_grid_item/chat_background": {
+    "bindings": [
+      { "binding_type": "collection",
+        "binding_name": "#chat_text",
+        "binding_name_override": "#text",
+        "binding_collection_name": "chat_text_grid"
+      },
+      { "binding_type": "view",
+        "source_property_name": "(not((#text = '') or ('%.5s' * #text = '_arx:')))",
+        "target_property_name": "#visible"
+  }]},
+  "root_panel": {
+    "modifications": [
+      { "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          { "@arx-credit.factory": {}},
+          { "@arx-toast.factory": {}},
+          { "@arx-energybar.factory": {}},
+          { "@arx-textbox.factory": {}}
+      ]}
+  ]}
+}

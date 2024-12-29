@@ -1,0 +1,148 @@
+{
+	"format_version": "1.20.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "arx:lawnmower_sticker",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"components": {
+			"minecraft:damage_sensor": {
+				"triggers": {
+					"cause": "all",
+					"deals_damage": false,
+					"on_damage": {
+						"event": "arx:interact"
+			}}},
+      "minecraft:interact": {
+        "interactions": [
+          { "swing": true,
+            "interact_text": "Pick",
+            "on_interact": {
+              "event": "arx:interact"
+          }}
+      ]},
+			"minecraft:type_family": {
+				"family": [
+					"arx_npc"
+				]
+			},
+			"minecraft:health": {
+				"value": 32767,
+				"max": 32767
+			},
+			"minecraft:movement": {
+				"value": 0
+			},
+			"minecraft:jump.static": {
+				"jump_power": 0
+			},
+			"minecraft:physics": {
+				"has_collision": true,
+				"has_gravity": false
+			},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": false
+			},
+			"minecraft:knockback_resistance": {
+				"value": 1
+			},
+			"minecraft:collision_box": {
+				"width": 0,
+				"height": 0
+			},
+			"minecraft:custom_hit_test": {
+        "hitboxes": [
+          { "width": 1,
+            "height": 1,
+            "pivot": [ 0, 0.5, 0 ]
+          },
+          { "width": 1,
+            "height": 1,
+            "pivot": [ 0, 0.5, 0 ]
+      }]}
+		},
+		"component_groups": {
+      "arx:despawn": {
+        "minecraft:instant_despawn": {
+          "remove_child_entities": true
+        }
+      },
+      "arxgroup:00": { "minecraft:skin_id": { "value": 0 }},
+      "arxgroup:01": { "minecraft:skin_id": { "value": 1 }},
+      "arxgroup:02": { "minecraft:skin_id": { "value": 2 }},
+      "arxgroup:03": { "minecraft:skin_id": { "value": 3 }},
+      "arxgroup:04": { "minecraft:skin_id": { "value": 4 }},
+      "arxgroup:05": { "minecraft:skin_id": { "value": 5 }},
+      "arxgroup:06": { "minecraft:skin_id": { "value": 6 }},
+      "arxgroup:07": { "minecraft:skin_id": { "value": 7 }},
+      "arxgroup:08": { "minecraft:skin_id": { "value": 8 }},
+      "arxgroup:09": { "minecraft:skin_id": { "value": 9 }},
+      "arxgroup:10": { "minecraft:skin_id": { "value": 10 }},
+      "arxgroup:11": { "minecraft:skin_id": { "value": 11 }},
+      "arxgroup:12": { "minecraft:skin_id": { "value": 12 }}
+    },
+    "events": {
+      "arx:remove": {
+        "add": {
+          "component_groups": [ "arx:despawn" ]
+        }
+      },
+      "arxgroup:s00": {"add": { "component_groups": [ "arxgroup:00" ]}},
+      "arxgroup:s01": {"add": { "component_groups": [ "arxgroup:01" ]}},
+      "arxgroup:s02": {"add": { "component_groups": [ "arxgroup:02" ]}},
+      "arxgroup:s03": {"add": { "component_groups": [ "arxgroup:03" ]}},
+      "arxgroup:s04": {"add": { "component_groups": [ "arxgroup:04" ]}},
+      "arxgroup:s05": {"add": { "component_groups": [ "arxgroup:05" ]}},
+      "arxgroup:s06": {"add": { "component_groups": [ "arxgroup:06" ]}},
+      "arxgroup:s07": {"add": { "component_groups": [ "arxgroup:07" ]}},
+      "arxgroup:s08": {"add": { "component_groups": [ "arxgroup:08" ]}},
+      "arxgroup:s09": {"add": { "component_groups": [ "arxgroup:09" ]}},
+      "arxgroup:s10": {"add": { "component_groups": [ "arxgroup:10" ]}},
+      "arxgroup:s11": {"add": { "component_groups": [ "arxgroup:11" ]}},
+      "arxgroup:s12": {"add": { "component_groups": [ "arxgroup:12" ]}},
+      "arx:interact": {
+        "sequence": [
+          { "filters": { "test": "is_skin_id", "value": 0 },
+            "queue_command": { "command": [ "say lawnmower. (No event?)" ], "target": "other"
+          }},
+          { "filters": { "test": "is_skin_id", "value": 1 },
+            "queue_command": { "command": [ "execute as @s[tag=arxsticker-01] run function sys/stickerFailure", "execute as @s[tag=!arxsticker-01] run function sys/stickerSuccess", "tag @s add arxsticker-01" ], "target": "other"
+          }},
+          { "filters": { "test": "is_skin_id", "value": 2 },
+            "queue_command": { "command": [ "execute as @s[tag=arxsticker-02] run function sys/stickerFailure", "execute as @s[tag=!arxsticker-02] run function sys/stickerSuccess", "tag @s add arxsticker-02" ], "target": "other"
+          }},
+          { "filters": { "test": "is_skin_id", "value": 3 },
+            "queue_command": { "command": [ "execute as @s[tag=arxsticker-03] run function sys/stickerFailure", "execute as @s[tag=!arxsticker-03] run function sys/stickerSuccess", "tag @s add arxsticker-03" ], "target": "other"
+          }},
+          { "filters": { "test": "is_skin_id", "value": 4 },
+            "queue_command": { "command": [ "execute as @s[tag=arxsticker-04] run function sys/stickerFailure", "execute as @s[tag=!arxsticker-04] run function sys/stickerSuccess", "tag @s add arxsticker-04" ], "target": "other"
+          }},
+          { "filters": { "test": "is_skin_id", "value": 5 },
+            "queue_command": { "command": [ "execute as @s[tag=arxsticker-05] run function sys/stickerFailure", "execute as @s[tag=!arxsticker-05] run function sys/stickerSuccess", "tag @s add arxsticker-05" ], "target": "other"
+          }},
+          { "filters": { "test": "is_skin_id", "value": 6 },
+            "queue_command": { "command": [ "execute as @s[tag=arxsticker-06] run function sys/stickerFailure", "execute as @s[tag=!arxsticker-06] run function sys/stickerSuccess", "tag @s add arxsticker-06" ], "target": "other"
+          }},
+          { "filters": { "test": "is_skin_id", "value": 7 },
+            "queue_command": { "command": [ "execute as @s[tag=arxsticker-07] run function sys/stickerFailure", "execute as @s[tag=!arxsticker-07] run function sys/stickerSuccess", "tag @s add arxsticker-07" ], "target": "other"
+          }},
+          { "filters": { "test": "is_skin_id", "value": 8},
+            "queue_command": { "command": [ "execute as @s[tag=arxsticker-08] run function sys/stickerFailure", "execute as @s[tag=!arxsticker-08] run function sys/stickerSuccess", "tag @s add arxsticker-08" ], "target": "other"
+          }},
+          { "filters": { "test": "is_skin_id", "value": 9 },
+            "queue_command": { "command": [ "execute as @s[tag=arxsticker-09] run function sys/stickerFailure", "execute as @s[tag=!arxsticker-09] run function sys/stickerSuccess", "tag @s add arxsticker-09" ], "target": "other"
+          }},
+          { "filters": { "test": "is_skin_id", "value": 10 },
+            "queue_command": { "command": [ "execute as @s[tag=arxsticker-10] run function sys/stickerFailure", "execute as @s[tag=!arxsticker-10] run function sys/stickerSuccess", "tag @s add arxsticker-10" ], "target": "other"
+          }},
+          { "filters": { "test": "is_skin_id", "value": 11 },
+            "queue_command": { "command": [ "execute as @s[tag=arxsticker-11] run function sys/stickerFailure", "execute as @s[tag=!arxsticker-11] run function sys/stickerSuccess", "tag @s add arxsticker-11" ], "target": "other"
+          }},
+          { "filters": { "test": "is_skin_id", "value": 12 },
+            "queue_command": { "command": [ "execute as @s[tag=arxsticker-12] run function sys/stickerFailure", "execute as @s[tag=!arxsticker-12] run function sys/stickerSuccess", "tag @s add arxsticker-12" ], "target": "other"
+          }}
+      ]}
+}}}

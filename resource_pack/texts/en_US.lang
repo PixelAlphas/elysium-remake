@@ -1,0 +1,13 @@
+
+## Misc
+arx.misc.checkpoint=§eCheckpoint Marked!
+
+## Dialog
+arx.dialog.player.000=Where am i...?
+arx.dialog.player.001=Is that a robot...?
+
+## Toasts [ 'h' = header, 't' = text ]
+## >> Help
+arx.toast.h000=§l§e- Tips -
+arx.toast.t000=This §eParticle on the glowing block§f is a §aCheckpoint.
+arx.toast.t001=The Stickers is located on every structures.

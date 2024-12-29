@@ -1,0 +1,1 @@
+titleraw @s actionbar {"rawtext":[{"text":"§cAlready Collected. §7( "},{"score":{"name":"@s","objective":"arx-sticker"}},{"text":" / 12 Left to go. )"}]}

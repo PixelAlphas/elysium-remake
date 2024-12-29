@@ -1,0 +1,13 @@
+execute as @s[scores={arx-checkpoint=0}] run tp @s 0 51 0 0 0
+execute as @s[scores={arx-checkpoint=1}] run tp @s -1 65 36 280 0
+execute as @s[scores={arx-checkpoint=2}] run tp @s 6 84 37 0 0
+execute as @s[scores={arx-checkpoint=3}] run tp @s -8 85 73 0 0
+execute as @s[scores={arx-checkpoint=4}] run tp @s -8 97 146 0 0
+execute as @s[scores={arx-checkpoint=5}] run tp @s 23 106 115 0 0
+execute as @s[scores={arx-checkpoint=6}] run tp @s 13 120 109 80 0
+execute as @s[scores={arx-checkpoint=7}] run tp @s 22 100 146 0 0
+execute as @s[scores={arx-checkpoint=8}] run tp @s 30 106 166 0 0
+execute as @s[scores={arx-checkpoint=9}] run tp @s -32 100 122 0 0
+execute as @s[scores={arx-checkpoint=10}] run tp @s -33 109 99 0 0
+execute as @s[scores={arx-checkpoint=11}] run tp @s -48 104 146 0 0
+execute as @s[scores={arx-checkpoint=12}] run tp @s -47 109 171 0 0

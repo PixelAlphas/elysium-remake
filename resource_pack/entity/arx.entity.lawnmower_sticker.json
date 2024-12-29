@@ -1,0 +1,22 @@
+{
+ "format_version": "1.10.0",
+ "minecraft:client_entity": {
+   "description": {
+     "identifier": "arx:lawnmower_sticker",
+     "spawn_egg": {
+       "overlay_color": "#a29920",
+       "base_color": "#a28949"
+     },
+     "materials": {
+       "default": "entity_alphatest"
+     },
+     "textures": {
+       "default": "textures/arx-assets/entity/lawnmower_sticker"
+     },
+     "geometry": {
+       "default": "geometry.arx.lawnmower_sticker"
+     },
+     "render_controllers": [ "controller.render.default" ]
+    }
+  }
+}

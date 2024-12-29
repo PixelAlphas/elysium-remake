@@ -1,0 +1,20 @@
+{ "format_version": 2,
+  "header": {
+    "name": "Elysium: Remake (RP)",
+    "description": "Resource pack designed for the map.\nBy Arxance",
+    "uuid": "bcdbd22a-fcd6-4c3b-bf20-40c313e572e2",
+    "version": [ 1, 0, 0 ],
+    "min_engine_version": [ 1, 21, 40 ]
+  },
+  "modules": [
+    { "type": "resources",
+      "uuid": "c4a12d1d-2fc8-4dca-a412-a413536c40b2",
+      "version": [ 1, 0, 0 ]
+  }],
+  "dependencies": [
+    { "uuid": "dc23fd27-701c-4195-87e0-8e634be46573",
+      "version": [ 1, 0, 0 ]
+  }],
+  "metadata": {
+    "authors": [ "// Arxance (Harlow)" ]
+}}

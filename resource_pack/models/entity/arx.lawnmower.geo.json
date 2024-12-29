@@ -1,0 +1,61 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.arx.lawnmower",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 7,
+				"visible_bounds_height": 4,
+				"visible_bounds_offset": [0, 1, 0]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [0, 2, 0]
+				},
+				{
+					"name": "body",
+					"parent": "root",
+					"pivot": [0, 2, 0],
+					"cubes": [
+						{"origin": [-4, 8, -4], "size": [8, 3, 9], "uv": [0, 41]},
+						{"origin": [-6, 6, -6], "size": [12, 2, 12], "uv": [0, 20]},
+						{"origin": [-8, 2, -8], "size": [16, 4, 16], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "wheelleft",
+					"parent": "body",
+					"pivot": [0, 1, 0],
+					"cubes": [
+						{"origin": [8, 1, -10], "size": [2, 6, 6], "uv": [0, 0]},
+						{"origin": [8, 1, 4], "size": [2, 6, 6], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "wheelright",
+					"parent": "body",
+					"pivot": [0, 1, 0],
+					"cubes": [
+						{"origin": [-10, 1, -10], "size": [2, 6, 6], "uv": [0, 0]},
+						{"origin": [-10, 1, 4], "size": [2, 6, 6], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "holder",
+					"parent": "body",
+					"pivot": [0, 5, -9],
+					"cubes": [
+						{"origin": [-8, 5, 6], "size": [2, 24, 2], "pivot": [0, 5, 7], "rotation": [-15, 0, 0], "uv": [48, 24], "mirror": true},
+						{"origin": [6, 5, 6], "size": [2, 24, 2], "pivot": [0, 5, 7], "rotation": [-15, 0, 0], "uv": [48, 24]},
+						{"origin": [-9, 26, 12], "size": [18, 3, 4], "uv": [0, 34]},
+						{"origin": [-6, 13, 9], "size": [12, 1, 1], "uv": [36, 22]},
+						{"origin": [-6, 17, 10], "size": [12, 1, 1], "uv": [36, 20]}
+					]
+				}
+			]
+		}
+	]
+}

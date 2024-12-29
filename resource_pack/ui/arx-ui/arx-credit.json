@@ -1,0 +1,36 @@
+{
+  "namespace": "arx-credit",
+  "factory": {
+    "type": "panel",
+    "factory": {
+      "name": "hud_actionbar_text_factory",
+      "control_ids": {
+        "hud_actionbar_text": "arx-textbox@arx-credit.element"
+      }
+  }},
+  "element": {
+    "type": "panel",
+    "$arx:actionbar": "$actionbar_text",
+    "controls": [
+      { "@arx-credit.core": {}}
+  ]},
+  "core": {
+    "ignored": "(not('%.11s' * $arx:actionbar = '_arx:chud0;'))",
+    "type": "image",
+    "texture": "textures/ui/Black",
+    "alpha": 0.7,
+    "size": [ 250, 250 ],
+    "controls": [
+      { "label": {
+          "type": "label",
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "offset": [ 8, 4 ],
+          "line_padding": 2,
+          "font_scale_factor": 1.2,
+          "size": [ "100%", "default" ],
+          "$tb_string": "($arx:actionbar - '_arx:chud0;')",
+          "text": "$tb_string"
+      }}
+  ]}
+}

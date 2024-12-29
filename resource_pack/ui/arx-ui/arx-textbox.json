@@ -1,0 +1,97 @@
+{
+  "namespace": "arx-textbox",
+  "factory": {
+    "type": "panel",
+    "factory": {
+      "name": "hud_actionbar_text_factory",
+      "control_ids": {
+        "hud_actionbar_text": "arx-textbox@arx-textbox.element"
+      }
+  }},
+  "element": {
+    "type": "panel",
+    "$arx:actionbar": "$actionbar_text",
+    "controls": [
+      { "@arx-textbox.core": {}}
+  ]},
+  "core": {
+    "ignored": "(not('%.11s' * $arx:actionbar = '_arx:dhud0;'))",
+    "type": "image",
+    "texture": "textures/ui/Black",
+    "alpha": 0.7,
+    "size": [ 250, "100%cm + 8px" ],
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "offset": [ 0, -60 ],
+    "controls": [
+      { "title": {
+          "type": "label",
+          "$tb_string|default": "",
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "shadow": true,
+          "font_scale_factor": 0.8,
+          "offset": [ 9, -4 ],
+          "size": [ "100%", 10 ],
+          "text": "$tb_string",
+          "variables": [
+            { "requires": "(not(($arx:actionbar - ';y;') = $arx:actionbar))",
+              "$tb_string": "You"
+            },
+            { "requires": "(not(($arx:actionbar - ';u;') = $arx:actionbar))",
+              "$tb_string": "??????"
+            },
+            { "requires": "(not(($arx:actionbar - ';r;') = $arx:actionbar))",
+              "$tb_string": "Rustic"
+            }
+          ]
+      }},
+      { "label": {
+          "type": "label",
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "offset": [ 8, -4 ],
+          "line_padding": 2,
+          "size": [ "100%", "default" ],
+          "$tb_string": "($arx:actionbar - '_arx:dhud0' - ';y' - ';u' - ';r' - ';paused;' - ';' )",
+          "text": "$tb_string"
+      }},
+      { "title": {
+          "type": "panel",
+          "size": [ "100%", 10 ],
+          "ignored": true,
+          "clips_children": true,
+          "controls": [
+            { "label": {
+                "type": "label",
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "shadow": true,
+                "offset": [ 10, -30 ],
+                "size": [ "100%", 20 ],
+                "$tb_string": "($arx:actionbar - '_arx:dhud0;')",
+                "text": "$tb_string"
+            }}
+      ]}},
+      { "standby_image": {
+          "ignored": "(($arx:actionbar - ';paused;') = $arx:actionbar)",
+          "type": "image",
+          "texture": "textures/arx-assets/ui/dialogue_standby",
+          "anchor_from": "bottom_right",
+          "anchor_to": "bottom_right",
+          "size": [ 11, 10 ],
+          "offset": [ -6, 2 ]
+      }},
+      { "standby_message": {
+          "ignored": "(($arx:actionbar - ';paused;') = $arx:actionbar)",
+          "type": "label",
+          "text": "(Press §e'Jump'§f to continue.)",
+          "anchor_from": "bottom_right",
+          "anchor_to": "bottom_right",
+          "alpha": 0.5,
+          "shadow": true,
+          "size": [ 120, 10 ],
+          "offset": [ -6, 15 ]
+      }}
+  ]}
+}

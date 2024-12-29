@@ -1,0 +1,8 @@
+{
+  "ui_defs": [
+	  "ui/arx-ui/arx-credit.json",
+	  "ui/arx-ui/arx-textbox.json",
+	  "ui/arx-ui/arx-toast.json",
+	  "ui/arx-ui/arx-energyBar.json"
+	]
+}
