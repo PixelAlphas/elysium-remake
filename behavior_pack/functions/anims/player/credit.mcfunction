@@ -12,7 +12,7 @@ execute as @s[scores={arx-animtimer=300}] run titleraw @s actionbar {"rawtext":[
 execute as @s[scores={arx-animtimer=300}] at @s run camera @s fade time 0 5 1
 execute as @s[scores={arx-animtimer=400}] run titleraw @s title {"rawtext":[{"text":""}]}
 execute as @s[scores={arx-animtimer=400}] at @s run playsound note.bass @s ~~~ 1 0.2
-execute as @s[scores={arx-animtimer=400}] run titleraw @s actionbar {"rawtext":[{"text":"_arx:chud0;\n\n§eDevelopment§f\n - Made in 17 Days\n - Developed on a phone.\n\n§eTools§f\n - Acode\n - Pixly (Heavily Modified by Harlow)\n - FL Mobile\n - Blockbench\n\n§eHarlow's Note§f\n \"Hope you enjoy it though, I do spent this even on my work lol.\""}]}
+execute as @s[scores={arx-animtimer=400}] run titleraw @s actionbar {"rawtext":[{"text":"_arx:chud0;\n\n§eDevelopment§f\n - Made in 13 Days\n - Developed on a phone.\n\n§eTools§f\n - Acode\n - Pixly (Heavily Modified by Harlow)\n - FL Mobile\n - Blockbench\n\n§eHarlow's Note§f\n \"Hope you enjoy it though, I do spent this even on my work lol.\""}]}
 execute as @s[scores={arx-animtimer=400}] at @s run camera @s fade time 0 5 1
 execute as @s[scores={arx-animtimer=500}] run titleraw @s actionbar {"rawtext":[{"text":"_arx:chud0;\n§eSpecial Thanks§r\n - Ciosciaa \n   §7( BAO's 20k Jam hoster, The true reason of why this DEMO exists. )§r\n - Sprunkles, guava and Daethie \n   §7( Helping me on despawning entity )§r\n - Coddy\n   §7( Scripts related )§r\n - Koala / Estrongel\n   §7( Learned alot scripts by fixing and maintaining Runecraft for stable. )§r\n - Alot of annoymous persons \n   §7( Giving a lesson on sound and music things, unfortunately they didn't make it here. )"}]}
 execute as @s[scores={arx-animtimer=500}] at @s run playsound note.bass @s ~~~ 1 0.2
