@@ -75,7 +75,7 @@ export var rustic = [
       "text": "§dElysium§r.° a corrupted 'The End's dimension that£blends 'Overworld'.°£Probably created by another rouge player.°£We're actually was sent here and everyone's gone.##########£...Just me left.°£Thought you could help us to get out of here.°"
     },
     { "title": ";y;",
-      "text": "I don't even know how.°£Since i just awake here out of nowhere.°"
+      "text": "I don't even know how to.°£Since i just woke here out of nowhere.°"
     },
     { "title": ";r;",
       "text": "There's §eLawnmower§r shaped stickers around tower.°£I can't pick it up though, only human can.°"
